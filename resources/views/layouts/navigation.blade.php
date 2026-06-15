@@ -111,7 +111,7 @@
                             <li>
 
                                 <a class="dropdown-item"
-                                   href="{{ route('dashboard') }}">
+                                   href="{{ route('admin.dashboard') }}">
 
                                     Dashboard
 

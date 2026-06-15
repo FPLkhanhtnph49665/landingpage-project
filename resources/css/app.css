@@ -1,3 +1,101 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.admin-shell {
+    display: flex;
+    min-height: 100vh;
+    background: #f8fafc;
+}
+
+.admin-sidebar {
+    width: 280px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1030;
+    overflow-y: auto;
+}
+
+.admin-sidebar.collapsed {
+    width: 80px;
+}
+
+.admin-page {
+    margin-left: 280px;
+    min-height: 100vh;
+    transition: margin 0.3s ease;
+}
+
+.admin-sidebar.collapsed + .admin-page {
+    margin-left: 80px;
+}
+
+.admin-topbar {
+    position: sticky;
+    top: 0;
+    z-index: 1020;
+}
+
+.admin-content {
+    min-height: calc(100vh - 140px);
+}
+
+.sidebar-brand {
+    background: #f3faf7;
+}
+
+.sidebar-brand a {
+    color: #0f5132;
+}
+
+.admin-sidebar .nav-link {
+    color: #334155;
+    border-radius: 0.75rem;
+}
+
+.admin-sidebar .nav-link.active,
+.admin-sidebar .nav-link:hover {
+    background: rgba(14, 165, 233, 0.08);
+    color: #0f172a;
+    font-weight: 500;
+}
+
+.admin-footer {
+    background: #ffffff;
+    border-top: 1px solid #e2e8f0;
+}
+
+.card-transparent {
+    background: rgba(255, 255, 255, 0.95);
+}
+
+.dark-theme body,
+.dark-theme .admin-page,
+.dark-theme .admin-sidebar,
+.dark-theme .admin-topbar,
+.dark-theme .card,
+.dark-theme .table {
+    background: #0f172a !important;
+    color: #e2e8f0 !important;
+}
+
+.dark-theme .nav-link,
+.dark-theme .sidebar-brand a,
+.dark-theme .admin-footer,
+.dark-theme .card .card-title,
+.dark-theme .card .card-text,
+.dark-theme .table thead th,
+.dark-theme .table tbody td {
+    color: #e2e8f0 !important;
+}
+
+.dark-theme .btn-outline-secondary {
+    color: #e2e8f0;
+    border-color: #334155;
+}
+
+.dark-theme .table-responsive {
+    background: #0f172a;
+}

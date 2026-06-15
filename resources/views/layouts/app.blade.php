@@ -60,6 +60,17 @@
                         </a>
                     </li>
 
+                    @auth
+                        @if(Auth::user()->hasAnyRole(['super-admin', 'admin']))
+                            <li class="nav-item">
+                                <a class="nav-link"
+                                   href="{{ route('admin.dashboard') }}">
+                                    Admin
+                                </a>
+                            </li>
+                        @endif
+                    @endauth
+
                     <li class="nav-item">
                         <a class="nav-link"
                            href="#">
@@ -113,7 +124,7 @@
 
                                 <li>
                                     <a class="dropdown-item"
-                                       href="{{ route('dashboard') }}">
+                                       href="{{ route('admin.dashboard') }}">
                                         Dashboard
                                     </a>
                                 </li>
