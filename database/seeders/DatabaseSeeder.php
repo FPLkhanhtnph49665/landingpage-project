@@ -17,6 +17,7 @@ class DatabaseSeeder extends Seeder
     {
         // Core demo data
         $this->call([
+            RolesAndPermissionsSeeder::class,
             SuperAdminSeeder::class,
             DemoDataSeeder::class,
         ]);
